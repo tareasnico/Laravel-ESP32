@@ -9,10 +9,10 @@ class AulaSeeder extends Seeder
 {
     public function run(): void
     {
-       // Código nuevo y mejorado
+
 Aula::updateOrCreate(
-    ['nombre' => 'Aula 101'],
-    ['ubicacion' => 'Piso 1, Ala Norte', 'capacidad' => 30]
+    ['nombre' => 'Maker'],
+    ['ubicacion' => 'Aula Azul', 'capacidad' => 30]
 );
 Aula::updateOrCreate(
     ['nombre' => 'Laboratorio de Química'],

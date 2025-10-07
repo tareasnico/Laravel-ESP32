@@ -10,6 +10,7 @@ use App\Http\Controllers\ReservaController;
 use App\Http\Controllers\MuebleController;
 use App\Http\Controllers\FocoController;
 use App\Http\Controllers\AireAcondicionadoController;
+use App\Http\Controllers\Api\FocoControllerApi;
 use App\Http\Controllers\DashboardController;
 
 Route::get('/', function () {
@@ -28,6 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('muebles', MuebleController::class);
     Route::resource('focos', FocoController::class);
     Route::resource('aires', AireAcondicionadoController::class)->parameters(['aires' => 'aire']);
+    Route::get('/focos/{foco}', [FocoController::class, 'status']);
         
     // Rutas del perfil de usuario que instala Breeze
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
