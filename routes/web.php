@@ -30,6 +30,10 @@ Route::middleware('auth')->group(function () {
     Route::resource('focos', FocoController::class);
     Route::resource('aires', AireAcondicionadoController::class)->parameters(['aires' => 'aire']);
     Route::get('/focos/{foco:codigo}', [FocoController::class, 'status']);
+
+    Route::get('/control-led', function () {
+        return view('control-led');
+    })->name('control.led');
         
     // Rutas del perfil de usuario que instala Breeze
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

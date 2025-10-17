@@ -43,6 +43,9 @@
 <x-responsive-nav-link :href="route('aires.index')" :active="request()->routeIs('aires.*')" class="text-blue-100 hover:bg-blue-700 hover:text-white">
     A/A
 </x-responsive-nav-link>
+<x-responisve-nav-link :href="route('control.led')" :active="request()->routeIs('control.led')">
+    {{ __('Control LED') }}
+</x-responsive-nav-link>
         </nav>
     </div>
 </div>
